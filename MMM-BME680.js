@@ -5,7 +5,7 @@ Module.register("MMM-BME680", {
         updateInterval: 100, // Seconds
         titleText: "Home weather",
         deviceAddress: "0x76",
-        temperatureScaleType: 0, // Celsuis
+        temperatureScaleType: 0, // Celsius
         pressureScaleType: 0, // hPa
         iaqScaleType: 0 // nominal values
     },
@@ -45,7 +45,7 @@ Module.register("MMM-BME680", {
 
         var table = document.createElement("table");
         var tbdy = document.createElement('tbody');
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < 4; i++) {
             var val = "";
             var sufix = "";
             var icon_img = "";
@@ -82,6 +82,11 @@ Module.register("MMM-BME680", {
                     }
                     icon_img = "tachometer-alt";
                     break;
+                case 3:
+                    val = this.iaq;
+                    icon_img = "tint";
+                    sufix = "range";
+                    break;
             }
 
             var tr = document.createElement('tr');
@@ -116,7 +121,8 @@ Module.register("MMM-BME680", {
             this.temperature = payload.temp;
             this.humidity = payload.humidity;
             this.pressure = payload.press;
-            this.updateDom();
+            this.iaq = payload.iaq;
+          this.updateDom();
         }
     },
 });
