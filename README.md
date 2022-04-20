@@ -33,7 +33,7 @@ Add it to the modules array in the `config/config.js` file:
 modules: [
 	...
 	{
-		module: 'MMM-BME280',
+		module: 'MMM-BME680',
 		position: 'top_left',
 		config: {
 			updateInterval: 5 //seconds
@@ -64,14 +64,14 @@ Configurations properties
 		</tr>
 		<tr>
 			<td><code>updateInterval</code></td>
-			<td>Wait interval between readings of BME280 sensor values in seconds
+			<td>Wait interval between readings of BME680 sensor values in seconds
 				<br><b>Type:</b> <code>int</code>
 				<br><b>Default:</b> <code>100</code>
 			</td>
 		</tr>
 		<tr>
 			<td><code>deviceAddress</code></td>
-			<td>BME280 I2C address, default is 0x76
+			<td>BME680 I2C address, default is 0x76
 				<br><b>Type:</b> <code>hex string</code>
 				<br><b>Default:</b> <code>"0x76"</code>
 			</td>
@@ -103,8 +103,8 @@ For more details about BCM pin numbers check [here](http://www.raspberrypi-spy.c
 - `smbus` (Python library, install via `pip3 install smbus` )
 
 ### Test BME280 module
-1. Navigate into your `MagicMirror/modules/MMM-BME280` folder
-2. Run script `python3 bme280.py <"optional I2C address">`
+1. Navigate into your `MagicMirror/modules/MMM-BME680` folder
+2. Run script `python3 bme680.py <"optional I2C address">`
    - If you get `FileNotFoundError: [Errno 2] No such file or directory` you have to enable i2c interface (`raspi-config nonint do_i2c 0`)
    - If script prints `OSError: [Errno 121] Remote I/O error` then you are using wrong I2C address. Try to run `i2cdetect -y 1` console command to find out your device address.
 3. Script should print sensor values like this `24.7 38.3 996.6` - that means `temperature humidity pressure`
