@@ -9,10 +9,10 @@ It monitors temperature, humidity and air pressure from [BME-680 sensor](https:/
 
 ## Installation
 1. Navigate into your MagicMirror's `modules` folder
-2. Clone repository `git clone https://github.com/awitwicki/MMM-BME280`
-3. Go to newly created directory (`cd MMM-BME280`)
+2. Clone repository `git clone https://github.com/samwaugh/MMM-BME680`
+3. Go to newly created directory (`cd MMM-BME680`)
 4. Execute `npm install` to install the node dependencies.
-5. Connect the BME280 to your Raspberry Pi
+5. Connect the BME680 to your Raspberry Pi
 <img src=".github/connect.jpg">
 
 ## Using the module
