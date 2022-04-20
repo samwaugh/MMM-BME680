@@ -1,6 +1,6 @@
 # MMM-BME680
 
-THIS IS A EXPERIMENTAL FORK!!!
+THIS IS A FORK IN DEVELOPMENT!!! CODE NOT TESTED
 
 This is an extension for the [MagicMirror²](https://github.com/MichMich/MagicMirror). It monitors temperature, humidity, air pressure and gas levels from [BME-680 sensor](https://www.bosch-sensortec.com/products/environmental-sensors/gas-sensors/bme680/). The BME-680 produces data within the following ranges:
 
@@ -105,7 +105,7 @@ For more details about BCM pin numbers check [here](http://www.raspberrypi-spy.c
 ### Test BME280 module
 1. Navigate into your `MagicMirror/modules/MMM-BME280` folder
 2. Run script `python3 bme280.py <"optional I2C address">`
-   - If you get `FileNotFoundError: [Errno 2] No such file or directory` you habe to enable i2c interface (`raspi-config nonint do_i2c 0`)
+   - If you get `FileNotFoundError: [Errno 2] No such file or directory` you have to enable i2c interface (`raspi-config nonint do_i2c 0`)
    - If script prints `OSError: [Errno 121] Remote I/O error` then you are using wrong I2C address. Try to run `i2cdetect -y 1` console command to find out your device address.
 3. Script should print sensor values like this `24.7 38.3 996.6` - that means `temperature humidity pressure`
    - If you only see `0 0 0` make sure you are not setting the PINs you are using in another program. 
