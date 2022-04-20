@@ -111,7 +111,7 @@ Configurations properties
 ### Developer Notes
 For more details about BCM pin numbers check [here](http://www.raspberrypi-spy.co.uk/2012/06/simple-guide-to-the-rpi-gpio-header-and-pins)
 
-### Test BME280 module
+### Test BME680 module
 1. Navigate into your `MagicMirror/modules/MMM-BME680` folder
 2. Run script `python3 bme680.py <"optional I2C address">`
    - If you get `FileNotFoundError: [Errno 2] No such file or directory` you have to enable i2c interface (`raspi-config nonint do_i2c 0`)
