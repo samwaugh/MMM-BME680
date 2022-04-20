@@ -104,11 +104,12 @@ def readBME680All(addr=DEVICE):
   wait_time = 1.25 + (2.3 * OVERSAMPLE_TEMP) + ((2.3 * OVERSAMPLE_PRES) + 0.575) + ((2.3 * OVERSAMPLE_HUM)+0.575)
   time.sleep(wait_time/1000)  # Wait the required time  
 
-  # Read temperature/pressure/humidity
+  # Read temperature/pressure/humidity/iaq
   data = bus.read_i2c_block_data(addr, REG_DATA, 8)
   pres_raw = (data[0] << 12) | (data[1] << 4) | (data[2] >> 4)
   temp_raw = (data[3] << 12) | (data[4] << 4) | (data[5] >> 4)
   hum_raw = (data[6] << 8) | data[7]
+  iaq_raw = (data[6] << 8) | data[7]
 
   # Refine temperature
   var1 = ((((temp_raw>>3)-(dig_T1<<1)))*(dig_T2)) >> 11
@@ -141,7 +142,7 @@ def readBME680All(addr=DEVICE):
   elif humidity < 0:
     humidity = 0
 
-  return temperature/100.0,pressure/100.0,humidity
+  return temperature/100.0,pressure/100.0,humidity,iaq
 
 def main():
 
@@ -151,7 +152,7 @@ def main():
 
   temperature,pressure,humidity = readBME680All()
 
-  print(round(temperature,1),round(humidity,1),round(pressure,1))
+  print(round(temperature,1),round(humidity,1),round(pressure,1),round(iaq,1))
 
 if __name__=="__main__":
    main()
