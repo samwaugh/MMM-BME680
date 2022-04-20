@@ -109,10 +109,9 @@ For more details about BCM pin numbers check [here](http://www.raspberrypi-spy.c
 
 ### Code Sources
 
-[MMM-BME280](https://github.com/awitwicki/MMM-BME280)
-
-[Using the BME280 I2C Temperature and Pressure Sensor in Python](https://www.raspberrypi-spy.co.uk/2016/07/using-bme280-i2c-temperature-pressure-sensor-in-python/)
-
+- [MMM-BME280](https://github.com/awitwicki/MMM-BME280)
+- [Using the BME280 I2C Temperature and Pressure Sensor in Python](https://www.raspberrypi-spy.co.uk/2016/07/using-bme280-i2c-temperature-pressure-sensor-in-python/)
+- [Borsch BME68x Sensor API](https://github.com/BoschSensortec/BME68x-Sensor-API)
 
 ### Additional Mirror Projects of Interest
 
