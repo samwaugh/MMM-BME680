@@ -37,13 +37,13 @@ def getUChar(data,index):
   result =  data[index] & 0xFF
   return result
 
-def readBME280ID(addr=DEVICE):
+def readBME680ID(addr=DEVICE):
   # Chip ID Register Address
   REG_ID     = 0xD0
   (chip_id, chip_version) = bus.read_i2c_block_data(addr, REG_ID, 2)
   return (chip_id, chip_version)
 
-def readBME280All(addr=DEVICE):
+def readBME680All(addr=DEVICE):
   # Register Addresses
   REG_DATA = 0xF7
   REG_CONTROL = 0xF4
@@ -110,7 +110,7 @@ def readBME280All(addr=DEVICE):
   temp_raw = (data[3] << 12) | (data[4] << 4) | (data[5] >> 4)
   hum_raw = (data[6] << 8) | data[7]
 
-  #Refine temperature
+  # Refine temperature
   var1 = ((((temp_raw>>3)-(dig_T1<<1)))*(dig_T2)) >> 11
   var2 = (((((temp_raw>>4) - (dig_T1)) * ((temp_raw>>4) - (dig_T1))) >> 12) * (dig_T3)) >> 14
   t_fine = var1+var2
@@ -145,11 +145,11 @@ def readBME280All(addr=DEVICE):
 
 def main():
 
-  # (chip_id, chip_version) = readBME280ID()
-  # print("Chip ID     :", chip_id)
-  # print("Version     :", chip_version)
+  (chip_id, chip_version) = readBME680ID()
+  print("Chip ID     :", chip_id)
+  print("Version     :", chip_version)
 
-  temperature,pressure,humidity = readBME280All()
+  temperature,pressure,humidity = readBME680All()
 
   print(round(temperature,1),round(humidity,1),round(pressure,1))
 
