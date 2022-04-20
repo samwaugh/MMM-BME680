@@ -2,10 +2,7 @@
 
 THIS IS A EXPERIMENTAL FORK!!!
 
-This is an extension for the [MagicMirror²](https://github.com/MichMich/MagicMirror).
-It monitors temperature, humidity, air pressure and gas levels from 
-[BME-680 sensor](https://www.bosch-sensortec.com/products/environmental-sensors/gas-sensors/bme680/). The BME-680 produces data within the 
-following ranges:
+This is an extension for the [MagicMirror²](https://github.com/MichMich/MagicMirror). It monitors temperature, humidity, air pressure and gas levels from [BME-680 sensor](https://www.bosch-sensortec.com/products/environmental-sensors/gas-sensors/bme680/). The BME-680 produces data within the following ranges:
 
 - Pressure: 300-1100 hPa
 - Humidity: 0-100%
@@ -15,13 +12,13 @@ following ranges:
 <img src=".github/IAQ.png">
 
 ## Installation
-1. Navigate into your MagicMirror's `modules` folder
-2. Clone repository `git clone https://github.com/samwaugh/MMM-BME680`
-3. Go to newly created directory (`cd MMM-BME680`)
+1. Navigate into your MagicMirror's `modules` folder.
+2. Clone repository `git clone https://github.com/samwaugh/MMM-BME680`.
+3. Go to newly created directory (`cd MMM-BME680`).
 4. Execute `npm install` to install the node dependencies.
-5. Connect the BME680 to your Raspberry Pi
+5. Connect the BME680 to your Raspberry Pi.
 
-The particular board that this was tested with is the [Pimoroni breakout](https://learn.pimoroni.com/article/getting-started-with-bme680-breakout), an older version than the current [BME-680](https://shop.pimoroni.com/products/bme680-breakout?variant=12491552129107) and the newer [BME-688](https://shop.pimoroni.com/products/bme688-breakout?variant=39336951709779).
+The particular board that this was tested with is the [Pimoroni breakout](https://learn.pimoroni.com/article/getting-started-with-bme680-breakout), older  than the current [BME-680](https://shop.pimoroni.com/products/bme680-breakout?variant=12491552129107) and the [BME-688](https://shop.pimoroni.com/products/bme688-breakout?variant=39336951709779). This can be connected directly to pins 1-5 on the 40-pin RPi.
 
 <img src=".github/bme680-5.webp">
 <img src=".github/RXD PWM0.png">
