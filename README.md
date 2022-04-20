@@ -3,7 +3,12 @@
 THIS IS A EXPERIMENTAL FORK!!!
 
 This is an extension for the [MagicMirror²](https://github.com/MichMich/MagicMirror).
-It monitors temperature, humidity, air pressure and gas levels from [BME-680 sensor](https://www.bosch-sensortec.com/products/environmental-sensors/gas-sensors/bme680/). The particular board that this was tested with is the [Pimoroni breakout](https://learn.pimoroni.com/article/getting-started-with-bme680-breakout).
+It monitors temperature, humidity, air pressure and gas levels from [BME-680 sensor](https://www.bosch-sensortec.com/products/environmental-sensors/gas-sensors/bme680/). The particular board that this was tested with is the [Pimoroni breakout](https://learn.pimoroni.com/article/getting-started-with-bme680-breakout). The BME-680 produces data within the following ranges:
+
+- Pressure: 300-1100 hPa
+- Humidity 0-100%
+- Temperature: -40-85°C 
+- Gas Index for Air Quality (IAQ) targeting breath Volitile Organic Compunds (b-VOC): 0-500 (+/-15% sensor-tp-sensor variation)
 
 <img src=".github/example.png">
 
