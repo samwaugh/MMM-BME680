@@ -3,7 +3,7 @@
 THIS IS A EXPERIMENTAL FORK!!!
 
 This is an extension for the [MagicMirror²](https://github.com/MichMich/MagicMirror).
-It monitors temperature, humidity and air pressure from [BME-280 sensor](https://www.bosch-sensortec.com/products/environmental-sensors/gas-sensors/bme680/). The particular board that this was tested with is the [Pimoroni breakout](https://learn.pimoroni.com/article/getting-started-with-bme680-breakout).
+It monitors temperature, humidity and air pressure from [BME-680 sensor](https://www.bosch-sensortec.com/products/environmental-sensors/gas-sensors/bme680/). The particular board that this was tested with is the [Pimoroni breakout](https://learn.pimoroni.com/article/getting-started-with-bme680-breakout).
 
 <img src=".github/example.png">
 
@@ -100,16 +100,17 @@ For more details about BCM pin numbers check [here](http://www.raspberrypi-spy.c
 3. Script should print sensor values like this `24.7 38.3 996.6` - that means `temperature humidity pressure`
    - If you only see `0 0 0` make sure you are not setting the PINs you are using in another program. 
 
-### Thanks
+### Code Sources
 
-[MMM-DHT-Sensor module](https://github.com/bernardpletikosa/MMM-DHT-Sensor)
+[MMM-BME280](https://github.com/awitwicki/MMM-BME280)
 
 [Using the BME280 I2C Temperature and Pressure Sensor in Python](https://www.raspberrypi-spy.co.uk/2016/07/using-bme280-i2c-temperature-pressure-sensor-in-python/)
 
 
 ### Additional Mirror Projects of Interest
 
-- [MHZ19 integration](https://github.com/awitwicki/MMM-MHZ19)
-- [Local temperature](https://github.com/glitch452/MMM-LocalTemperature)
-- [DHT Sensor](https://github.com/bernardpletikosa/MMM-DHT-Sensor)
-- [Xaomi 01ZM](https://github.com/rubinho101/MMM-01ZM)
+- [MMM-BME280](https://github.com/awitwicki/MMM-BME280) from which this project was forked, many thanks!
+- [MMM-MHZ19](https://github.com/awitwicki/MMM-MHZ19)
+- [MMM-Local temperature](https://github.com/glitch452/MMM-LocalTemperature)
+- [MMM-DHT Sensor](https://github.com/bernardpletikosa/MMM-DHT-Sensor)
+- [MMM-Xaomi 01ZM](https://github.com/rubinho101/MMM-01ZM)
