@@ -6,7 +6,8 @@ Module.register("MMM-BME680", {
         titleText: "Home weather",
         deviceAddress: "0x76",
         temperatureScaleType: 0, // Celsuis
-        pressureScaleType: 0 // hPa
+        pressureScaleType: 0, // hPa
+        iaqScaleType: 0 // nominal values
     },
 
     // Define start sequence.
@@ -16,6 +17,7 @@ Module.register("MMM-BME680", {
         this.temperature = 'Loading...';
         this.humidity = 'Loading...';
         this.pressure = 'Loading...';
+        this.iaq = 'Loading...';
 
         this.update();
         setInterval(
@@ -28,7 +30,7 @@ Module.register("MMM-BME680", {
     },
 
     getStyles: function () {
-        return ['MMM-BME280.css'];
+        return ['MMM-BME680.css'];
     },
 
     // Override dom generator.
