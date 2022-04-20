@@ -3,7 +3,13 @@
 THIS IS A EXPERIMENTAL FORK!!!
 
 This is an extension for the [MagicMirror²](https://github.com/MichMich/MagicMirror).
-It monitors temperature, humidity, air pressure and gas levels from [BME-680 sensor](https://www.bosch-sensortec.com/products/environmental-sensors/gas-sensors/bme680/). The particular board that this was tested with is the [Pimoroni breakout](https://learn.pimoroni.com/article/getting-started-with-bme680-breakout). The BME-680 produces data within the following ranges:
+It monitors temperature, humidity, air pressure and gas levels from [BME-680 sensor](https://www.bosch-sensortec.com/products/environmental-sensors/gas-sensors/bme680/). 
+
+The particular board that this was tested with is the [Pimoroni breakout](https://learn.pimoroni.com/article/getting-started-with-bme680-breakout), an older version than the current [BME-680](https://shop.pimoroni.com/products/bme680-breakout?variant=12491552129107) and the newer [BME-688](https://shop.pimoroni.com/products/bme688-breakout?variant=39336951709779).
+
+<img src=".github/bme680-5.webp">
+
+The BME-680 produces data within the following ranges:
 
 - Pressure: 300-1100 hPa
 - Humidity: 0-100%
@@ -11,8 +17,6 @@ It monitors temperature, humidity, air pressure and gas levels from [BME-680 sen
 - Index for Air Quality (IAQ) targeting breath Volitile Organic Compunds (b-VOC): 0-500 (+/-15% sensor-to-sensor variation)
 
 <img src=".github/IAQ.png">
-
-<img src=".github/example.png">
 
 ## Installation
 1. Navigate into your MagicMirror's `modules` folder
@@ -23,6 +27,8 @@ It monitors temperature, humidity, air pressure and gas levels from [BME-680 sen
 <img src=".github/connect.jpg">
 
 ## Using the module
+
+<img src=".github/example.png">
 
 Add it to the modules array in the `config/config.js` file:
 
