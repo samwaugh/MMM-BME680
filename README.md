@@ -98,9 +98,8 @@ Configurations properties
 ## Additional Mirror Projects of Interest
 
 - [MMM-BME280](https://github.com/awitwicki/MMM-BME280) for temperature, humidity and pressure (from which this project was forked, many thanks!)
-- [MMM-MHZ19](https://github.com/awitwicki/MMM-MHZ19) CO2 sensor
-- [MMM-LocalTemperature](https://github.com/glitch452/MMM-LocalTemperature) temperature and humidity using Adafruit DHT11, DHT22, or AM2302 sensors.
-- [MMM-DHT-Sensor](https://github.com/bernardpletikosa/MMM-DHT-Sensor) also Adafruit DHT11, DHT22 and AM2302 sensors, and fork grandparent!
+- [MMM-MHZ19](https://github.com/awitwicki/MMM-MHZ19) using [MHZ-19](https://revspace.nl/MHZ19) CO2 sensor
+- [MMM-DHT-Sensor](https://github.com/bernardpletikosa/MMM-DHT-Sensor) (fork grandparent!) and [MMM-LocalTemperature](https://github.com/glitch452/MMM-LocalTemperature) temperature and humidity using Adafruit DHT11, DHT22, or AM2302 sensors.
 - [MMM-01ZM](https://github.com/rubinho101/MMM-01ZM) Xiaomi LYWSDCGQ 01ZM Temperature-Humidity AND [Nova PM SDS011](https://microcontrollerslab.com/nova-pm-sds011-dust-sensor-pinout-working-interfacing-datasheet/) dust partical sensors 
 
 ## Code Information
