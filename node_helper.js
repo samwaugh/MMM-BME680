@@ -1,9 +1,9 @@
 'use strict';
 
 /* Magic Mirror
- * Module: MMM-BME280
+ * Module: MMM-BME680
  *
- * By Andrew Witwicki
+ * By Sam Waugh
  * MIT Licensed.
  */
 
@@ -12,7 +12,7 @@ const exec = require('child_process').exec;
 
 module.exports = NodeHelper.create({
 	start: function () {
-		console.log('BME280 helper started ...');
+		console.log('BME680 helper started ...');
 	},
 
 	// Subclass socketNotificationReceived received.
@@ -24,7 +24,7 @@ module.exports = NodeHelper.create({
 			var deviceAddr = this.config.deviceAddress;
 
 			// execute external DHT Script
-			exec(`python3 ./modules/MMM-BME280/bme280.py ${deviceAddr}`, (error, stdout) => {
+			exec(`python3 ./modules/MMM-BME680/bme680.py ${deviceAddr}`, (error, stdout) => {
 				if (error) {
 					console.error(`exec error: ${error}`);
 					return;
