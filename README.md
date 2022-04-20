@@ -107,7 +107,7 @@ modules: [
 - `smbus` (Python library, install via `pip3 install smbus` )
 
 ### Developer Notes
-- [Pimoroni breakout](https://learn.pimoroni.com/article/getting-started-with-bme680-breakout)
+- [Pimoroni Python code for BME68x](https://github.com/pimoroni/bme680-python)
 - [Borsch BME68x Sensor API](https://github.com/BoschSensortec/BME68x-Sensor-API)
 - [BCM pin numbers (RPi GPIO)](http://www.raspberrypi-spy.co.uk/2012/06/simple-guide-to-the-rpi-gpio-header-and-pins)
 - [Using the BME280 I2C Temperature and Pressure Sensor in Python](https://www.raspberrypi-spy.co.uk/2016/07/using-bme280-i2c-temperature-pressure-sensor-in-python/)
