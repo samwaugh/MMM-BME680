@@ -1,8 +1,8 @@
 {
-  "name": "mmm-bme280",
-  "version": "1.0.0",
+  "name": "mmm-bme680",
+  "version": "0.0.1",
   "description": "",
-  "author": "awitwicki",
+  "author": "samwaugh",
   "license": "MIT",
   "dependencies": {
     "@fortawesome/fontawesome-free": "latest"
