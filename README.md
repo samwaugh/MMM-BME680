@@ -10,6 +10,8 @@ It monitors temperature, humidity, air pressure and gas levels from [BME-680 sen
 - Temperature: -40-85°C 
 - Gas Index for Air Quality (IAQ) targeting breath Volitile Organic Compunds (b-VOC): 0-500 (+/-15% sensor-tp-sensor variation)
 
+<img src=".github/IAQ.png">
+
 <img src=".github/example.png">
 
 ## Installation
