@@ -107,3 +107,9 @@ For more details about BCM pin numbers check [here](http://www.raspberrypi-spy.c
 [Using the BME280 I2C Temperature and Pressure Sensor in Python](https://www.raspberrypi-spy.co.uk/2016/07/using-bme280-i2c-temperature-pressure-sensor-in-python/)
 
 
+### Additional Mirror Projects of Interest
+
+- [MHZ19 integration](https://github.com/awitwicki/MMM-MHZ19)
+- [Local temperature](https://github.com/glitch452/MMM-LocalTemperature)
+- [DHT Sensor](https://github.com/bernardpletikosa/MMM-DHT-Sensor)
+- [Xaomi 01ZM](https://github.com/rubinho101/MMM-01ZM)
