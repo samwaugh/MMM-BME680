@@ -107,7 +107,10 @@ modules: [
 - `smbus` (Python library, install via `pip3 install smbus` )
 
 ### Developer Notes
-For more details about BCM pin numbers check [here](http://www.raspberrypi-spy.co.uk/2012/06/simple-guide-to-the-rpi-gpio-header-and-pins)
+- [Pimoroni breakout](https://learn.pimoroni.com/article/getting-started-with-bme680-breakout)
+- [Borsch BME68x Sensor API](https://github.com/BoschSensortec/BME68x-Sensor-API)
+- [BCM pin numbers (RPi GPIO)](http://www.raspberrypi-spy.co.uk/2012/06/simple-guide-to-the-rpi-gpio-header-and-pins)
+- [Using the BME280 I2C Temperature and Pressure Sensor in Python](https://www.raspberrypi-spy.co.uk/2016/07/using-bme280-i2c-temperature-pressure-sensor-in-python/)
 
 ### Test BME680 module
 1. Navigate into your `MagicMirror/modules/MMM-BME680` folder
@@ -116,10 +119,3 @@ For more details about BCM pin numbers check [here](http://www.raspberrypi-spy.c
    - If script prints `OSError: [Errno 121] Remote I/O error` then you are using wrong I2C address. Try to run `i2cdetect -y 1` console command to find out your device address.
 3. Script should print sensor values like this `24.7 38.3 996.6` - that means `temperature humidity pressure`
    - If you only see `0 0 0` make sure you are not setting the PINs you are using in another program. 
-
-### Code Sources
-
-- [MMM-BME280](https://github.com/awitwicki/MMM-BME280)
-- [Using the BME280 I2C Temperature and Pressure Sensor in Python](https://www.raspberrypi-spy.co.uk/2016/07/using-bme280-i2c-temperature-pressure-sensor-in-python/)
-- [Borsch BME68x Sensor API](https://github.com/BoschSensortec/BME68x-Sensor-API)
-
