@@ -3,7 +3,7 @@
 THIS IS A EXPERIMENTAL FORK!!!
 
 This is an extension for the [MagicMirror²](https://github.com/MichMich/MagicMirror).
-It monitors temperature, humidity and air pressure from [BME-280 sensor](https://www.bosch-sensortec.com/products/environmental-sensors/humidity-sensors-bme280).
+It monitors temperature, humidity and air pressure from [BME-280 sensor](https://www.bosch-sensortec.com/products/environmental-sensors/gas-sensors/bme680/). The particular board that this was tested with is the [Pimoroni breakout](https://learn.pimoroni.com/article/getting-started-with-bme680-breakout).
 
 <img src=".github/example.png">
 
