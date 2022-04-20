@@ -98,7 +98,7 @@ Configurations properties
 ## Additional Mirror Projects of Interest
 
 - [MMM-BME280](https://github.com/awitwicki/MMM-BME280) for temperature, humidity and pressure (from which this project was forked, many thanks!)
-- [MMM-MHZ19](https://github.com/awitwicki/MMM-MHZ19)
+- [MMM-MHZ19](https://github.com/awitwicki/MMM-MHZ19) CO2 sensor
 - [MMM-Local temperature](https://github.com/glitch452/MMM-LocalTemperature)
 - [MMM-DHT Sensor](https://github.com/bernardpletikosa/MMM-DHT-Sensor) fork grandparent!
 - [MMM-Xaomi 01ZM](https://github.com/rubinho101/MMM-01ZM)
