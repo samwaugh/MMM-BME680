@@ -1,5 +1,5 @@
 
-Module.register("MMM-BME280", {
+Module.register("MMM-BME680", {
     // Default module config.
     defaults: {
         updateInterval: 100, // Seconds
