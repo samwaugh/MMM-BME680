@@ -26,8 +26,6 @@ The particular board that this was tested with is the [Pimoroni breakout](https:
 
 ## Using the module
 
-<img src=".github/example.png">
-
 Add it to the modules array in the `config/config.js` file:
 
 ````javascript
@@ -44,9 +42,9 @@ modules: [
 ]
 ````
 
-## Configuration options
+### Configuration options
 
-Configurations properties
+<img src=".github/example.png">
 
 <table width="100%">
 	<thead>
