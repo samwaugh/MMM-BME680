@@ -95,12 +95,21 @@ Configurations properties
 	</tbody>
 </table>
 
-## Developer Notes
-For more details about BCM pin numbers check [here](http://www.raspberrypi-spy.co.uk/2012/06/simple-guide-to-the-rpi-gpio-header-and-pins)
+## Additional Mirror Projects of Interest
 
-## Dependencies
+- [MMM-BME280](https://github.com/awitwicki/MMM-BME280) for temperature, humidity and pressure (from which this project was forked, many thanks!)
+- [MMM-MHZ19](https://github.com/awitwicki/MMM-MHZ19)
+- [MMM-Local temperature](https://github.com/glitch452/MMM-LocalTemperature)
+- [MMM-DHT Sensor](https://github.com/bernardpletikosa/MMM-DHT-Sensor) fork grandparent!
+- [MMM-Xaomi 01ZM](https://github.com/rubinho101/MMM-01ZM)
+
+## Code Information
+### Dependencies
 - `python3` (should be installed on Raspberry Pi)
 - `smbus` (Python library, install via `pip3 install smbus` )
+
+### Developer Notes
+For more details about BCM pin numbers check [here](http://www.raspberrypi-spy.co.uk/2012/06/simple-guide-to-the-rpi-gpio-header-and-pins)
 
 ### Test BME280 module
 1. Navigate into your `MagicMirror/modules/MMM-BME680` folder
@@ -116,10 +125,3 @@ For more details about BCM pin numbers check [here](http://www.raspberrypi-spy.c
 - [Using the BME280 I2C Temperature and Pressure Sensor in Python](https://www.raspberrypi-spy.co.uk/2016/07/using-bme280-i2c-temperature-pressure-sensor-in-python/)
 - [Borsch BME68x Sensor API](https://github.com/BoschSensortec/BME68x-Sensor-API)
 
-### Additional Mirror Projects of Interest
-
-- [MMM-BME280](https://github.com/awitwicki/MMM-BME280) from which this project was forked, many thanks!
-- [MMM-MHZ19](https://github.com/awitwicki/MMM-MHZ19)
-- [MMM-Local temperature](https://github.com/glitch452/MMM-LocalTemperature)
-- [MMM-DHT Sensor](https://github.com/bernardpletikosa/MMM-DHT-Sensor)
-- [MMM-Xaomi 01ZM](https://github.com/rubinho101/MMM-01ZM)
