@@ -100,7 +100,7 @@ Configurations properties
 - [MMM-BME280](https://github.com/awitwicki/MMM-BME280) for temperature, humidity and pressure (from which this project was forked, many thanks!)
 - [MMM-MHZ19](https://github.com/awitwicki/MMM-MHZ19) CO2 sensor
 - [MMM-Local temperature](https://github.com/glitch452/MMM-LocalTemperature) temperature and humidity using Adafruit DHT11, DHT22, or AM2302 sensors.
-- [MMM-DHT Sensor](https://github.com/bernardpletikosa/MMM-DHT-Sensor) fork grandparent!
+- [MMM-DHT Sensor](https://github.com/bernardpletikosa/MMM-DHT-Sensor) also Adafruit DHT11, DHT22 and AM2302 sensors, and fork grandparent!
 - [MMM-Xaomi 01ZM](https://github.com/rubinho101/MMM-01ZM)
 
 ## Code Information
