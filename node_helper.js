@@ -23,7 +23,7 @@ module.exports = NodeHelper.create({
 			this.config = payload
 			var deviceAddr = this.config.deviceAddress;
 
-			// execute external DHT Script
+			// execute external script
 			exec(`python3 ./modules/MMM-BME680/bme680.py ${deviceAddr}`, (error, stdout) => {
 				if (error) {
 					console.error(`exec error: ${error}`);
@@ -35,7 +35,7 @@ module.exports = NodeHelper.create({
 					temp: arr[0],
 					humidity: arr[1],
 					press: arr[2],
-					aoc: arr[3],
+					iaq: arr[3],
 				});
 			});
 		}
