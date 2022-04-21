@@ -105,6 +105,7 @@ modules: [
 ### Dependencies
 - `python3` (should be installed on Raspberry Pi)
 - `smbus` (Python library, install via `pip3 install smbus` )
+- `bme680` (Python library, install via `pip3 install bme680` if Pimoroni library needed)
 
 ### Developer Notes
 - [Pimoroni Python code for BME68x](https://github.com/pimoroni/bme680-python)
