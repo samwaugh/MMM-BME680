@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import smbus
+import bme680
 import sys
 import time
 from ctypes import c_short
