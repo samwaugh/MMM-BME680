@@ -13,7 +13,7 @@ This is an extension for the [MagicMirror²](https://github.com/MichMich/MagicMi
 
 ## Installation
 1. Navigate into your MagicMirror's `modules` folder.
-2. Clone repository `git clone https://github.com/samwaugh/MMM-BME680`.
+2. Clone repository `git clone https://github.com/samwaugh/MMM-BME680.git`.
 3. Go to newly created directory (`cd MMM-BME680`).
 4. Execute `npm install` to install the node dependencies.
 5. Connect the BME680 to your Raspberry Pi.
