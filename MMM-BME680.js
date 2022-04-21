@@ -17,7 +17,6 @@ Module.register("MMM-BME680", {
         this.temperature = 'Loading...';
         this.humidity = 'Loading...';
         this.pressure = 'Loading...';
-        this.iaq = 'Loading...';
 
         this.update();
         setInterval(
@@ -121,7 +120,6 @@ Module.register("MMM-BME680", {
             this.temperature = payload.temp;
             this.humidity = payload.humidity;
             this.pressure = payload.press;
-            this.iaq = payload.iaq;
           this.updateDom();
         }
     },
