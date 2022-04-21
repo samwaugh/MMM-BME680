@@ -3,7 +3,7 @@ Module.register("MMM-BME680", {
     // Default module config.
     defaults: {
         updateInterval: 100, // Seconds
-        titleText: "Home weather",
+        titleText: "HOME SENSOR",
         deviceAddress: "0x76",
         temperatureScaleType: 0, // Celsius
         pressureScaleType: 0, // hPa
@@ -44,7 +44,7 @@ Module.register("MMM-BME680", {
 
         var table = document.createElement("table");
         var tbdy = document.createElement('tbody');
-        for (var i = 0; i < 4; i++) {
+        for (var i = 0; i < 3; i++) {
             var val = "";
             var sufix = "";
             var icon_img = "";
@@ -80,11 +80,6 @@ Module.register("MMM-BME680", {
                             break;
                     }
                     icon_img = "tachometer-alt";
-                    break;
-                case 3:
-                    val = this.iaq;
-                    icon_img = "tint";
-                    sufix = "range";
                     break;
             }
 
