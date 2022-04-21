@@ -24,7 +24,7 @@ module.exports = NodeHelper.create({
 			var deviceAddr = this.config.deviceAddress;
 
 			// execute external script
-			exec(`python3 ./modules/MMM-BME680/bme680.py ${deviceAddr}`, (error, stdout) => {
+			exec(`python3 ./modules/MMM-BME680/bme.py ${deviceAddr}`, (error, stdout) => {
 				if (error) {
 					console.error(`exec error: ${error}`);
 					return;
