@@ -8,7 +8,14 @@ from ctypes import c_short
 from ctypes import c_byte
 from ctypes import c_ubyte
 
-
+DEVICE = 0x76 # Default device I2C address
+try: #override device address like '0x77'
+  DEVICE = int(sys.argv[1], 16)
+except:
+  pass
+bus = smbus.SMBus(1) # Rev 2 Pi, Pi 2 & Pi 3 uses bus 1
+                     # Rev 1 Pi uses bus 0
+  
 def getShort(data, index):
   # return two bytes from data as a signed 16-bit value
   return c_short((data[index+1] << 8) + data[index]).value
@@ -131,16 +138,10 @@ def readBME680All(addr=DEVICE):
   return temperature/100.0,pressure/100.0,humidity,iaq
 
 def main():
-  DEVICE = 0x76 # Default device I2C address
-  try: #override device address like '0x77'
-    DEVICE = int(sys.argv[1], 16)
-  except:
-    pass
-  bus = smbus.SMBus(1) # Rev 2 Pi, Pi 2 & Pi 3 uses bus 1
-                       # Rev 1 Pi uses bus 0
+
   (chip_id, chip_version) = bus.read_i2c_block_data(DEVICE, 0xD0, 2)
-    print("Chip ID     :", chip_id)
-    print("Version     :", chip_version)
+  print("Chip ID     :", chip_id)
+  print("Version     :", chip_version)
 
   # temperature,pressure,humidity = readBME680All()
   # print(round(temperature,1),round(humidity,1),round(pressure,1),round(iaq,1))
