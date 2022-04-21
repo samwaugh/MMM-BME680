@@ -108,15 +108,13 @@ modules: [
 - `bme680` (Python library, install via `pip3 install bme680` if Pimoroni library needed)
 
 ### Developer Notes
-- [Pimoroni Python code for BME68x](https://github.com/pimoroni/bme680-python)
+- [Pimoroni Python code for BME68x](https://github.com/pimoroni/bme680-python) used for this project
 - [Borsch BME68x Sensor API](https://github.com/BoschSensortec/BME68x-Sensor-API)
-- [BCM pin numbers (RPi GPIO)](http://www.raspberrypi-spy.co.uk/2012/06/simple-guide-to-the-rpi-gpio-header-and-pins)
-- [Using the BME280 I2C Temperature and Pressure Sensor in Python](https://www.raspberrypi-spy.co.uk/2016/07/using-bme280-i2c-temperature-pressure-sensor-in-python/)
+
 
 ### Test BME680 module
 1. Navigate into your `MagicMirror/modules/MMM-BME680` folder
-2. Run script `python3 bme680.py <"optional I2C address">`
+2. Run script `python3 bme.py`
    - If you get `FileNotFoundError: [Errno 2] No such file or directory` you have to enable i2c interface (`raspi-config nonint do_i2c 0`)
-   - If script prints `OSError: [Errno 121] Remote I/O error` then you are using wrong I2C address. Try to run `i2cdetect -y 1` console command to find out your device address.
 3. Script should print sensor values like this `24.7 38.3 996.6` - that means `temperature humidity pressure`
    - If you only see `0 0 0` make sure you are not setting the PINs you are using in another program. 
