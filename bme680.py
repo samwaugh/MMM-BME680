@@ -128,14 +128,15 @@ def readBME680All(addr=DEVICE):
 
   # Refine humidity
   humidity = t_fine - 76800.0
-  humidity = (hum_raw - (dig_H4 * 64.0 + dig_H5 / 16384.0 * humidity)) * (dig_H2 / 65536.0 * (1.0 + dig_H6 / 67108864.0 * humidity * (1.0 + dig_H3 / 67108864.0 * humidity)))
+  humidity = (hum_raw - (dig_H4 * 64.0 + dig_H5 / 16384.0 * humidity)) 
+           * (dig_H2 / 65536.0 * (1.0 + dig_H6 / 67108864.0 * humidity * (1.0 + dig_H3 / 67108864.0 * humidity)))
   humidity = humidity * (1.0 - dig_H1 * humidity / 524288.0)
   if humidity > 100:
     humidity = 100
   elif humidity < 0:
     humidity = 0
 
-  return temperature/100.0,pressure/100.0,humidity,iaq
+  return temperature/100.0,pressure/100.0,humidity
 
 def main():
 
@@ -143,8 +144,8 @@ def main():
   print("Chip ID     :", chip_id)
   print("Version     :", chip_version)
 
-  # temperature,pressure,humidity = readBME680All()
-  # print(round(temperature,1),round(humidity,1),round(pressure,1),round(iaq,1))
+  temperature,pressure,humidity = readBME680All()
+  print(round(temperature,1),round(humidity,1),round(pressure,1))
 
 if __name__=="__main__":
    main()
