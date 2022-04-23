@@ -69,13 +69,6 @@ modules: [
 			</td>
 		</tr>
 		<tr>
-			<td><code>deviceAddress</code></td>
-			<td>BME680 I2C address, default is 0x76
-				<br><b>Type:</b> <code>hex string</code>
-				<br><b>Default:</b> <code>"0x76"</code>
-			</td>
-		</tr>
-		<tr>
 			<td><code>temperatureScaleType</code></td>
 			<td>Different temperature scales
 				<br><b>Type:</b> <code>int</code>
