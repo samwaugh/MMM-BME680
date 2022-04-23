@@ -1,18 +1,13 @@
 .bme-icon { 
 	color: white;
 	display: inline;
-	font-size: 75%;
-
 }
 .bme-text{
 	margin-left: 15px;
-	font-size: 75%;
-
 }
 .bme-header {
 	border-bottom: 1px solid #666;
 	font-size: 75%;
-
 }
 .bme-td-icon
 {
