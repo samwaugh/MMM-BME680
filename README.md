@@ -62,6 +62,13 @@ modules: [
 			</td>
 		</tr>
 		<tr>
+			<td><code>icons</code></td>
+			<td>Display icons
+				<br><b>Type:</b> <code>boolean</code>
+				<br><b>Default:</b> <code>true</code>
+			</td>
+		</tr>
+		<tr>
 			<td><code>updateInterval</code></td>
 			<td>Wait interval between readings of BME680 sensor values in seconds
 				<br><b>Type:</b> <code>int</code>
