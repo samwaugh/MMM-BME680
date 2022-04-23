@@ -62,10 +62,10 @@ modules: [
 			</td>
 		</tr>
 		<tr>
-			<td><code>icons</code></td>
+			<td><code>iconDisplay</code></td>
 			<td>Display icons
-				<br><b>Type:</b> <code>boolean</code>
-				<br><b>Default:</b> <code>true</code>
+				<br><b>Type:</b> <code>int</code>
+				<br><b>Default:</b> <code>1</code> display, <code>0</code> do not display
 			</td>
 		</tr>
 		<tr>
