@@ -92,10 +92,10 @@ Module.register("MMM-BME680", {
             var icon = document.createElement("i");
 
             switch (this.config.iconDisplay) {
-                case 1: // display icons
+                case 0: // don't display icons
                     icon.className = ' bme-icon';
                     break;
-                case 0: // don't display icons
+                case 1: // display icons
                     icon.className = 'fa fa-' + icon_img + ' bme-icon';
                     break;
             }
