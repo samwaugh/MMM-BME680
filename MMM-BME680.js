@@ -4,7 +4,6 @@ Module.register("MMM-BME680", {
     defaults: {
         updateInterval: 100, // Seconds
         titleText: "HOME SENSOR",
-        deviceAddress: "0x76",
         temperatureScaleType: 0, // Celsius
         pressureScaleType: 0, // hPa
         iaqScaleType: 0 // nominal values
