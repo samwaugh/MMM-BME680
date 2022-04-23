@@ -78,7 +78,8 @@ Module.register("MMM-BME680", {
                             sufix = " inHg";
                             break;
                     }
-                    icon_img = "tachometer-alt";
+                    icon_img = "tachometer-alt"; // maybe "wind"
+//                    icon_img = "house-chimney-medical" or "fan";
                     break;
             }
 
