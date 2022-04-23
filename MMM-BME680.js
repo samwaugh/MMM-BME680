@@ -3,7 +3,7 @@ Module.register("MMM-BME680", {
     // Default module config.
     defaults: {
         titleText: "HOME SENSOR",
-        icons: true,
+        icons: true, // display icons
         updateInterval: 100, // Seconds
         temperatureScaleType: 0, // Celsius
         pressureScaleType: 0, // hPa
@@ -92,7 +92,7 @@ Module.register("MMM-BME680", {
             var tr = document.createElement('tr');
             var icon = document.createElement("i");
 
-            switch (this.config.temperatureScaleType) {
+            switch (this.config.icons) {
                 case true: // display icons
                     icon.className = ' bme-icon';
                     break;
