@@ -92,7 +92,14 @@ Module.register("MMM-BME680", {
             var tr = document.createElement('tr');
             var icon = document.createElement("i");
 
-            icon.className = 'fa fa-' + icon_img + ' bme-icon';
+            switch (this.config.temperatureScaleType) {
+                case true: // display icons
+                    icon.className = ' bme-icon';
+                    break;
+                case false: // don't display icons
+                    icon.className = 'fa fa-' + icon_img + ' bme-icon';
+                    break;
+            }
 
             var text_div = document.createElement("div");
             var text = document.createTextNode(" " + val + suffix);
@@ -101,9 +108,7 @@ Module.register("MMM-BME680", {
 
             var td = document.createElement('td');
             td.className = 'bme-td-icon';
-//            if this.config.icons {
             td.appendChild(icon)
-//            }
             tr.appendChild(td)
 
             var td = document.createElement('td');
