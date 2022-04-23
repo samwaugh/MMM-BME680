@@ -101,7 +101,9 @@ Module.register("MMM-BME680", {
 
             var td = document.createElement('td');
             td.className = 'bme-td-icon';
-            td.appendChild(icon)
+            if this.config.icons {
+                td.appendChild(icon)
+            }
             tr.appendChild(td)
 
             var td = document.createElement('td');
