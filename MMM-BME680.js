@@ -2,8 +2,9 @@
 Module.register("MMM-BME680", {
     // Default module config.
     defaults: {
-        updateInterval: 100, // Seconds
         titleText: "HOME SENSOR",
+        icons: true,
+        updateInterval: 100, // Seconds
         temperatureScaleType: 0, // Celsius
         pressureScaleType: 0, // hPa
         iaqScaleType: 0 // nominal values
@@ -16,6 +17,7 @@ Module.register("MMM-BME680", {
         this.temperature = 'Loading...';
         this.humidity = 'Loading...';
         this.pressure = 'Loading...';
+        this.iaq = 'Loading...';
 
         this.update();
         setInterval(
@@ -43,9 +45,9 @@ Module.register("MMM-BME680", {
 
         var table = document.createElement("table");
         var tbdy = document.createElement('tbody');
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < 4; i++) {
             var val = "";
-            var sufix = "";
+            var suffix = "";
             var icon_img = "";
 
             switch (i) {
@@ -53,11 +55,11 @@ Module.register("MMM-BME680", {
                     switch (this.config.temperatureScaleType) {
                         case 0: // Celsius
                             val = this.temperature;
-                            sufix = "°C";
+                            suffix = "°C";
                             break;
                         case 1: // Fahrenheit
                             val = Math.round(this.temperature * 9.0 / 5.0 + 32.0);
-                            sufix = "°F";
+                            suffix = "°F";
                             break;
                     }
                     icon_img = "temperature-high";
@@ -65,21 +67,25 @@ Module.register("MMM-BME680", {
                 case 1:
                     val = this.humidity;
                     icon_img = "tint";
-                    sufix = "%";
+                    suffix = "%";
                     break;
                 case 2:
                     switch (this.config.pressureScaleType) {
                         case 0: // hPa
                             val = this.pressure;
-                            sufix = " hPa";
+                            suffix = " hPa";
                             break;
                         case 1: // inHg
                             val = Math.round(this.pressure * 100 / 33.864) / 100;
-                            sufix = " inHg";
+                            suffix = " inHg";
                             break;
                     }
                     icon_img = "tachometer-alt"; // maybe "wind"
-//                    icon_img = "house-chimney-medical" or "fan";
+                    break;
+                case 3:
+                    val = this.iaq;
+                    suffix = " Thngs";
+                    icon_img = "house-chimney-medical" // maybe "fan";
                     break;
             }
 
@@ -89,7 +95,7 @@ Module.register("MMM-BME680", {
             icon.className = 'fa fa-' + icon_img + ' bme-icon';
 
             var text_div = document.createElement("div");
-            var text = document.createTextNode(" " + val + sufix);
+            var text = document.createTextNode(" " + val + suffix);
             text_div.className = 'bme-text';
             text_div.appendChild(text);
 
@@ -115,6 +121,7 @@ Module.register("MMM-BME680", {
             this.temperature = payload.temp;
             this.humidity = payload.humidity;
             this.pressure = payload.press;
+            this.iaq = payload.iaq;
           this.updateDom();
         }
     },
