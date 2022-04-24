@@ -9,8 +9,6 @@ This is an extension for the [MagicMirror²](https://github.com/MichMich/MagicMi
 - Temperature: -40-85°C 
 - Index for Air Quality (IAQ) targeting breath Volitile Organic Compunds (b-VOC): 0-500 (+/-15% sensor-to-sensor variation)
 
-<img src=".github/IAQ.png">
-
 ## Installation
 1. Navigate into your MagicMirror's `modules` folder.
 2. Clone repository `git clone https://github.com/samwaugh/MMM-BME680.git`.
@@ -109,8 +107,9 @@ modules: [
 
 ### Developer Notes
 - [Pimoroni Python code for BME68x](https://github.com/pimoroni/bme680-python) used for this project
-- [Borsch BME68x Sensor API](https://github.com/BoschSensortec/BME68x-Sensor-API)
+- [Borsch BME68x Sensor API](https://github.com/BoschSensortec/BME68x-Sensor-API) to use this to produce the IAQ calculation, licencing and a compiled binary is required. As this is not easily achievable for the open source nature of MMM, this module is not used.
 
+<img src=".github/IAQ.png">
 
 ### Test BME680 module
 1. Navigate into your `MagicMirror/modules/MMM-BME680` folder
