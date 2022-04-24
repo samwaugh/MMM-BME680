@@ -1,7 +1,5 @@
 # MMM-BME680
 
-THIS IS A FORK IN DEVELOPMENT!!! CODE NOT TESTED
-
 This is an extension for the [MagicMirror²](https://github.com/MichMich/MagicMirror). It monitors temperature, humidity, air pressure and gas levels from [BME-680 sensor](https://www.bosch-sensortec.com/products/environmental-sensors/gas-sensors/bme680/). The BME-680 produces data within the following ranges:
 
 - Pressure: 300-1100 hPa
