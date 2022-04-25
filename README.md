@@ -93,7 +93,30 @@ modules: [
 	</tbody>
 </table>
 
-## Additional Mirror Projects of Interest
+
+## Code Information
+### Dependencies
+- `python3` (should be installed on Raspberry Pi)
+- `bme680` (Python library, install via `pip3 install bme680` if Pimoroni library needed)
+
+### Developer Notes
+The following are used to generate the code in this repository:
+- [MMM-BME280](https://github.com/awitwicki/MMM-BME280)
+- [Pimoroni Python code for BME68x](https://github.com/pimoroni/bme680-python)
+- [raspi-bme680-iaq](https://github.com/thstielow/raspi-bme680-iaq) where thstielow reverse engineered an IAQ estimate (found in this [thread](https://forums.pimoroni.com/t/bme680-observed-gas-ohms-readings/6608)). This code has been directly copied because I am a github noob.
+
+The following are other possible sources of air quality code that have not been used:
+- [This thread]( https://forums.pimoroni.com/t/bme680-air-quality-low/6293) may provide an alterate method of calibrating the BME680, as may [this](https://github.com/robmarkcole/bme680-mqtt).
+- [Borsch BME68x Sensor API](https://github.com/BoschSensortec/BME68x-Sensor-API) to use this to produce the IAQ calculation, licencing and a compiled binary is required. As this is not easily achievable for the open source nature of MMM, this module is not used. ([Deprecated Borsch BEM680 Sensor API](https://github.com/BoschSensortec/BME680_driver))
+
+### Test BME680 module
+1. Navigate into your `MagicMirror/modules/MMM-BME680` folder
+2. Run script `python3 bme.py`
+   - If you get `FileNotFoundError: [Errno 2] No such file or directory` you have to enable i2c interface (`raspi-config nonint do_i2c 0`)
+3. Script should print sensor values like this `24.7 38.3 996.6` - that means `temperature humidity pressure`
+   - If you only see `0 0 0` make sure you are not setting the PINs you are using in another program. 
+
+## Additional Sensor Projects of Interest
 
 The following are MMM projects looking at integrating hardware sensors as opposed to full IOT weather sensor solutions:
 
@@ -104,22 +127,3 @@ The following are MMM projects looking at integrating hardware sensors as oppose
 - [MMM-ds18b20](https://github.com/Thlb/MMM-temp-ds18b20) temperature sensor.
 - [MMM-01ZM](https://github.com/rubinho101/MMM-01ZM) Xiaomi LYWSDCGQ 01ZM Temperature-Humidity sensor AND [Nova PM SDS011](https://microcontrollerslab.com/nova-pm-sds011-dust-sensor-pinout-working-interfacing-datasheet/) particulate matter (dust and smoke) sensor.
 
-
-## Code Information
-### Dependencies
-- `python3` (should be installed on Raspberry Pi)
-- `smbus` (Python library, install via `pip3 install smbus` ) --- needed?
-- `bme680` (Python library, install via `pip3 install bme680` if Pimoroni library needed)
-
-### Developer Notes
-- [Pimoroni Python code for BME68x](https://github.com/pimoroni/bme680-python) used for this project
-- [raspi-bme-iaq](https://github.com/thstielow/raspi-bme680-iaq) thstielow reverse engineering of an IAQ estimate (from this [thread](https://forums.pimoroni.com/t/bme680-observed-gas-ohms-readings/6608)).
-- [This thread]( https://forums.pimoroni.com/t/bme680-air-quality-low/6293) may provide an alterate method of calibrating the BME680, as may [this](https://github.com/robmarkcole/bme680-mqtt).
-- [Borsch BME68x Sensor API](https://github.com/BoschSensortec/BME68x-Sensor-API) to use this to produce the IAQ calculation, licencing and a compiled binary is required. As this is not easily achievable for the open source nature of MMM, this module is not used. ([Deprecated Borsch BEM680 Sensor API](https://github.com/BoschSensortec/BME680_driver))
-
-### Test BME680 module
-1. Navigate into your `MagicMirror/modules/MMM-BME680` folder
-2. Run script `python3 bme.py`
-   - If you get `FileNotFoundError: [Errno 2] No such file or directory` you have to enable i2c interface (`raspi-config nonint do_i2c 0`)
-3. Script should print sensor values like this `24.7 38.3 996.6` - that means `temperature humidity pressure`
-   - If you only see `0 0 0` make sure you are not setting the PINs you are using in another program. 
