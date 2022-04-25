@@ -83,7 +83,7 @@ Module.register("MMM-BME680", {
                     break;
                 case 3:
                     val = this.iaq;
-                    suffix = " Thngs";
+                    suffix = " Ohms";
                     icon_img = "house-chimney-medical" // maybe "fan";
                     break;
             }
