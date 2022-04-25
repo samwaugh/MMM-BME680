@@ -5,7 +5,9 @@ This is an extension for the [MagicMirror²](https://github.com/MichMich/MagicMi
 - Pressure: 300-1100 hPa
 - Humidity: 0-100%
 - Temperature: -40-85°C 
-- Index for Air Quality (IAQ) targeting breath Volitile Organic Compunds (b-VOC): 0-500 (+/-15% sensor-to-sensor variation)
+- Index for Air Quality (IAQ) targeting breath Volitile Organic Compounds (b-VOC): 0-500 (+/-15% sensor-to-sensor variation)
+
+Bosch provide propriety code for converting to the Index for Air Quality (IAQ), which requires licencing. This project attempts to callibrate the sensor on a "good day" and then provides a relative change in air quality from those good measurements. I suggest selecting open air, shady location where the [air quality is good as can be](https://github.com/gpailler/MMM-aqicn) to provide that calibration. The sensor only provides a rough indication of volitile organic compounds, so the calibration should be sufficient as an indication of indoor air quality. (No responsibility is taken for anyone relying on this in dangerous environments, obviously.)
 
 ## Installation
 1. Navigate into your MagicMirror's `modules` folder.
