@@ -92,10 +92,15 @@ modules: [
 
 ## Additional Mirror Projects of Interest
 
+The following are MMM projects looking at integrating hardware sensors as opposed to full IOT weather sensor solutions:
+
 - [MMM-BME280](https://github.com/awitwicki/MMM-BME280) for temperature, humidity and pressure (from which this project was forked, many thanks!).
 - [MMM-MHZ19](https://github.com/awitwicki/MMM-MHZ19) using [MHZ-19](https://revspace.nl/MHZ19) CO2 sensor.
-- [MMM-DHT-Sensor](https://github.com/bernardpletikosa/MMM-DHT-Sensor) (fork grandparent!) and [MMM-LocalTemperature](https://github.com/glitch452/MMM-LocalTemperature) temperature and humidity using Adafruit DHT11, DHT22, or AM2302 sensors.
+- Temperature and humidity using Adafruit DHT11, DHT22, or AM2302 sensors: [MMM-DHT-Sensor](https://github.com/bernardpletikosa/MMM-DHT-Sensor) (fork grandparent!), [MMM-LocalTemperature](https://github.com/glitch452/MMM-LocalTemperature), [MMM-DHT22](https://github.com/Bangee44/MMM-DHT22), [MMM-dht22](https://github.com/nebulx29/MMM-dht22), [MMM-loldht22](https://github.com/cslev/MMM-loldht22)
+- [MMM-HDC1080](https://github.com/MichaelF1/MMM-HDC1080) temperature and humidity sensor.
+- [MMM-ds18b20](https://github.com/Thlb/MMM-temp-ds18b20) temperature sensor.
 - [MMM-01ZM](https://github.com/rubinho101/MMM-01ZM) Xiaomi LYWSDCGQ 01ZM Temperature-Humidity sensor AND [Nova PM SDS011](https://microcontrollerslab.com/nova-pm-sds011-dust-sensor-pinout-working-interfacing-datasheet/) particulate matter (dust and smoke) sensor.
+
 
 ## Code Information
 ### Dependencies
