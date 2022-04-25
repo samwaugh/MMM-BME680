@@ -18,7 +18,7 @@ Bosch provide propriety code for converting to the Index for Air Quality (IAQ), 
 6. Run calibration script... TBC.
 
 ### Hardware
-The particular board that this was tested with is the [Pimoroni breakout](https://learn.pimoroni.com/article/getting-started-with-bme680-breakout), older  than the current [BME-680](https://shop.pimoroni.com/products/bme680-breakout?variant=12491552129107) and the [BME-688](https://shop.pimoroni.com/products/bme688-breakout?variant=39336951709779). This can be connected directly to pins 1-5 on the 40-pin RPi GPIO. This also assumes 2IC is enabled on the RPi.
+The particular board that this was tested with is the [Pimoroni breakout](https://learn.pimoroni.com/article/getting-started-with-bme680-breakout), older  than the current [BME-680](https://shop.pimoroni.com/products/bme680-breakout?variant=12491552129107) and the [BME-688](https://shop.pimoroni.com/products/bme688-breakout?variant=39336951709779). This can be connected directly to pins 1-5 on the 40-pin RPi GPIO. This also assumes 2IC is enabled on the RPi. (It is not recommended to have the sensor so close to the Pi board, given the potential for heat generation.)
 
 <img src=".github/bme680-5.webp">
 <img src=".github/RXD PWM0.png">
