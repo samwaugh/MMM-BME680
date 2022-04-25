@@ -1,8 +1,6 @@
 #!/usr/bin python
 import bme680
 from bme680iaq import *
-# import numpy as np
-# from time import *
 
 # BME680 initialization
 bme680_temp_offset = -2
@@ -32,6 +30,7 @@ if sensor.get_sensor_data():
 	suffix = ", {0:.1f}%aq".format(AQ)
     else:
         R_gas = 0
-        AQ = None
+        AQ = -1
 	suffix = ", cal."
-    print("{0:.2f}°C, {1:.2f}hPa, {2:.2f}%RH, {3:.1f}kOhm {4:s}".format(sensor.data.temperature, sensor.data.humidity, sensor.data.pressure,R_gas/1000, suffix)
+    print("{0:.2f}°C, {1:.2f}hPa, {2:.2f}%RH, {3:.1f}kOhm {4:s}"
+	  .format(sensor.data.temperature, sensor.data.humidity, sensor.data.pressure,R_gas/1000, suffix)
