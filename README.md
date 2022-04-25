@@ -114,6 +114,7 @@ The following are MMM projects looking at integrating hardware sensors as oppose
 ### Developer Notes
 - [Pimoroni Python code for BME68x](https://github.com/pimoroni/bme680-python) used for this project
 - [raspi-bme-iaq](https://github.com/thstielow/raspi-bme680-iaq) thstielow reverse engineering of an IAQ estimate (from this [thread](https://forums.pimoroni.com/t/bme680-air-quality-low/6293)).
+- [This thread]( https://forums.pimoroni.com/t/bme680-air-quality-low/6293) may provide an alterate method of calibrating the BME680.
 - [Borsch BME68x Sensor API](https://github.com/BoschSensortec/BME68x-Sensor-API) to use this to produce the IAQ calculation, licencing and a compiled binary is required. As this is not easily achievable for the open source nature of MMM, this module is not used. ([Deprecated Borsch BEM680 Sensor API](https://github.com/BoschSensortec/BME680_driver))
 
 ### Test BME680 module
