@@ -2,12 +2,12 @@
 
 This is an extension for the [MagicMirror²](https://github.com/MichMich/MagicMirror). It monitors temperature, humidity, air pressure and gas levels from [BME-680 sensor](https://www.bosch-sensortec.com/products/environmental-sensors/gas-sensors/bme680/). The BME-680 produces data within the following ranges:
 
-- Pressure: 300-1100 hPa
-- Humidity: 0-100%
-- Temperature: -40-85°C 
-- Index for Air Quality (IAQ) targeting breath Volitile Organic Compounds (b-VOC): 0-500 (+/-15% sensor-to-sensor variation)
+- Pressure: 300-1100 hPa.
+- Humidity: 0-100%.
+- Temperature: -40-85°C.
+- Air quality: measure of breath Volitile Organic Compounds (b-VOC) noting a +/-15% sensor-to-sensor variation.
 
-Bosch provide propriety code for converting to the Index for Air Quality (IAQ), which requires licencing. This project attempts to callibrate the sensor on a "good day" and then provides a relative change in air quality from those good measurements. I suggest selecting open air, shady location where the [air quality is good as can be](https://github.com/gpailler/MMM-aqicn) to provide that calibration. The sensor only provides a rough indication of volitile organic compounds, so the calibration should be sufficient as an indication of indoor air quality. (No responsibility is taken for anyone relying on this in dangerous environments, obviously.)
+Bosch provide propriety code for converting to the Index for Air Quality (IAQ), which requires licencing of their software. This project attempts to callibrate the sensor on a "good day" and then provides a relative change in air quality from those good measurements. I suggest selecting open air, shady location where the [air quality is good as can be](https://github.com/gpailler/MMM-aqicn) to provide that calibration. The sensor only provides a rough indication of b-VOC, so the calibration should be sufficient as an indication of indoor air quality. (No responsibility is taken for anyone relying on this in dangerous environments, obviously.)
 
 ## Installation
 1. Navigate into your MagicMirror's `modules` folder.
@@ -15,6 +15,7 @@ Bosch provide propriety code for converting to the Index for Air Quality (IAQ), 
 3. Go to newly created directory (`cd MMM-BME680`).
 4. Execute `npm install` to install the node dependencies.
 5. Connect the BME680 to your Raspberry Pi.
+6. Run calibration script... TBC.
 
 ### Hardware
 The particular board that this was tested with is the [Pimoroni breakout](https://learn.pimoroni.com/article/getting-started-with-bme680-breakout), older  than the current [BME-680](https://shop.pimoroni.com/products/bme680-breakout?variant=12491552129107) and the [BME-688](https://shop.pimoroni.com/products/bme688-breakout?variant=39336951709779). This can be connected directly to pins 1-5 on the 40-pin RPi GPIO. This also assumes 2IC is enabled on the RPi.
