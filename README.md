@@ -108,7 +108,7 @@ The following are MMM projects looking at integrating hardware sensors as oppose
 ## Code Information
 ### Dependencies
 - `python3` (should be installed on Raspberry Pi)
-- `smbus` (Python library, install via `pip3 install smbus` )
+- `smbus` (Python library, install via `pip3 install smbus` ) --- needed?
 - `bme680` (Python library, install via `pip3 install bme680` if Pimoroni library needed)
 
 ### Developer Notes
