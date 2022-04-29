@@ -1,4 +1,4 @@
-# MMM-BME68x
+# MMM-BME680
 
 This is an extension for the [MagicMirror²](https://github.com/MichMich/MagicMirror). It monitors temperature, humidity, air pressure and gas levels from [BME-680 sensor](https://www.bosch-sensortec.com/products/environmental-sensors/gas-sensors/bme680/), and should work with the BME-688 as well. The BME-680 produces data within the following ranges:
 
