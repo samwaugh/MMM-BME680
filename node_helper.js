@@ -35,7 +35,8 @@ module.exports = NodeHelper.create({
 					temp: arr[0],
 					humidity: arr[1],
 					press: arr[2],
-					iaq: arr[3],
+					r: arr[3],
+					iaq: arr[4],
 				});
 			});
 		}
