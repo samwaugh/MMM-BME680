@@ -1,6 +1,6 @@
 # MMM-BME68x
 
-This is an extension for the [MagicMirror²](https://github.com/MichMich/MagicMirror). It monitors temperature, humidity, air pressure and gas levels from [BME-68x sensor](https://www.bosch-sensortec.com/products/environmental-sensors/gas-sensors/bme680/). The BME-680 produces data within the following ranges:
+This is an extension for the [MagicMirror²](https://github.com/MichMich/MagicMirror). It monitors temperature, humidity, air pressure and gas levels from [BME-680 sensor](https://www.bosch-sensortec.com/products/environmental-sensors/gas-sensors/bme680/), and should work with the BME-688 as well. The BME-680 produces data within the following ranges:
 
 - Pressure: 300-1100 hPa.
 - Humidity: 0-100%.
@@ -15,9 +15,9 @@ Bosch provide propriety code for converting to the Index for Air Quality (IAQ), 
 2. Clone repository `git clone https://github.com/samwaugh/MMM-BME680.git`.
 3. Go to newly created directory (`cd MMM-BME680`).
 4. Execute `npm install` to install the node dependencies.
-5. 
+
 ### Hardware
-The particular board that this was tested with is the [Pimoroni breakout](https://learn.pimoroni.com/article/getting-started-with-bme680-breakout), older  than the current [BME-680](https://shop.pimoroni.com/products/bme680-breakout?variant=12491552129107) and the [BME-688](https://shop.pimoroni.com/products/bme688-breakout?variant=39336951709779). This can be connected directly to pins 1-5 on the 40-pin RPi GPIO. This also assumes 2IC is enabled on the RPi. (It is not recommended to have the sensor so close to the Pi board, given the potential for heat generation.)
+The particular board that this was tested with is the [Pimoroni breakout](https://learn.pimoroni.com/article/getting-started-with-bme680-breakout), older  than the current [BME-680](https://shop.pimoroni.com/products/bme680-breakout?variant=12491552129107) and the [BME-688](https://shop.pimoroni.com/products/bme688-breakout?variant=39336951709779). This can be connected directly to pins 1-5 on the 40-pin RPi GPIO. This also assumes I2C is enabled on the RPi. (It is not recommended to have the sensor so close to the Pi board, given the potential for heat generation.)
 
 <img src=".github/bme680-5.webp">
 <img src=".github/RXD PWM0.png">
