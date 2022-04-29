@@ -1,35 +1,10 @@
+# raspi-bme680-iaq/bme680IAQ.py /
+# thstielow Updated and improved AQ calculation
+# Latest commit f1c41a0 on 25 Feb
 
-Skip to content
-Pull requests
-Issues
-Marketplace
-Explore
-@samwaugh
-thstielow /
-raspi-bme680-iaq
-Public
-
-Code
-Issues 1
-Pull requests
-Actions
-Projects
-Wiki
-Security
-
-    Insights
-
-raspi-bme680-iaq/bme680IAQ.py /
-@thstielow
-thstielow Updated and inproved AQ calculation
-Latest commit f1c41a0 on 25 Feb
-History
-1 contributor
-73 lines (53 sloc) 2.39 KB
 import numpy as np
 import bme680
 	
-
 class IAQTracker:
 	def __init__(self, burn_in_cycles = 300, gas_recal_period = 3600, ph_slope = 0.03):
 		self.slope = ph_slope
@@ -39,24 +14,18 @@ class IAQTracker:
 		self.gas_recal_period = gas_recal_period	#number of cycles after which to drop last entry of the gas calibration list. Here: 1h
 		self.gas_recal_step = 0
 	
-	
-	
-	
-	#calculates the saturation water density of air at the current temperature (in °C)
-	#return the saturation density rho_max in kg/m^3
-	#this is equal to a relative humidity of 100% at the current temperature 
+	# calculates the saturation water density of air at the current temperature (in °C)
+	# return the saturation density rho_max in kg/m^3
+	# this is equal to a relative humidity of 100% at the current temperature 
 	def waterSatDensity(self, temp):
 		rho_max = (6.112* 100 * np.exp((17.62 * temp)/(243.12 + temp)))/(461.52 * (temp + 273.15))
 		return rho_max
-	
-		
 		
 	def getIAQ(self, bme_data):
 		temp = bme_data.temperature
 		press = bme_data.pressure
 		hum = bme_data.humidity
 		R_gas = bme_data.gas_resistance
-		
 		
 		#calculate stauration density and absolute humidity
 		rho_max = self.waterSatDensity(temp)
@@ -67,8 +36,8 @@ class IAQTracker:
 		
 		if self.burn_in_cycles > 0:
 			#check if burn-in-cycles are recorded
-			self.burn_in_cycles -= 1		#count down cycles
-			if comp_gas > self.gas_ceil:	#if value exceeds current ceiling, add to calibration list and update ceiling
+			self.burn_in_cycles -= 1	# count down cycles
+			if comp_gas > self.gas_ceil:	# if value exceeds current ceiling, add to calibration list and update ceiling
 				self.gas_cal_data = [comp_gas]
 				self.gas_ceil = comp_gas
 			return None			#return None type as sensor burn-in is not yet completed
@@ -87,7 +56,6 @@ class IAQTracker:
 			AQ = np.minimum((comp_gas / self.gas_ceil)**2, 1) * 100
 			
 			
-			
 			#for compensating negative drift (dropping resistance) of the gas sensor:
 			#delete oldest value from calibration list and add current value
 			self.gas_recal_step += 1
@@ -97,21 +65,4 @@ class IAQTracker:
 				del self.gas_cal_data[0]
 				self.gas_ceil = np.mean(self.gas_cal_data)
 		
-		
 		return AQ
-
-    © 2022 GitHub, Inc.
-
-    Terms
-    Privacy
-    Security
-    Status
-    Docs
-    Contact GitHub
-    Pricing
-    API
-    Training
-    Blog
-    About
-
-Loading complete
