@@ -30,5 +30,5 @@ if sensor.get_sensor_data():
     else:
         R_gas_k = 0
         AQ = -1
-    print("{0:.2f} {1:.2f} {2:.2f} {3:.1f} {4:.2f} {5:.1f}"
+    print("{0:.2f} {1:.2f} {2:.2f} {3:.1f} {4:.2f}"
 	  .format(sensor.data.temperature, sensor.data.humidity, sensor.data.pressure, R_gas_k, AQ)
