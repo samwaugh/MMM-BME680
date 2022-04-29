@@ -25,10 +25,10 @@ iaq_tracker = IAQTracker()
 
 if sensor.get_sensor_data():
     if sensor.data.heat_stable:
-        R_gas_k = sensor.data.gas_resistance/1000
-        AQ = iaq_tracker.getIAQ(sensor.data)
+        r_gas_k = sensor.data.gas_resistance/1000
+        aq = iaq_tracker.getIAQ(sensor.data)
     else:
-        R_gas_k = 0
-        AQ = -1
+        r_gas_k = 0
+        aq = -1
     print("{0:.2f} {1:.2f} {2:.2f} {3:.1f} {4:.2f}"
-	  .format(sensor.data.temperature, sensor.data.humidity, sensor.data.pressure, R_gas_k, AQ)
+	  .format(sensor.data.temperature, sensor.data.humidity, sensor.data.pressure, r_gas_k, aq)
