@@ -17,6 +17,7 @@ Module.register("MMM-BME680", {
         this.humidity = 'Loading...';
         this.pressure = 'Loading...';
         this.iaq = 'Loading...';
+        this.r = "Loading...";
 
         this.update();
         setInterval(
@@ -44,7 +45,7 @@ Module.register("MMM-BME680", {
 
         var table = document.createElement("table");
         var tbdy = document.createElement('tbody');
-        for (var i = 0; i < 4; i++) {
+        for (var i = 0; i < 5; i++) {
             var val = "";
             var suffix = "";
             var icon_img = "";
@@ -83,10 +84,15 @@ Module.register("MMM-BME680", {
                     break;
                 case 3:
                     val = this.iaq;
-                    suffix = " Ohms";
+                    suffix = " %";
                     icon_img = "house-chimney-medical" // maybe "fan";
                     break;
-            }
+                 case 4:
+                    val = this.r;
+                    suffix = " Ohms";
+                    icon_img = "fan" // maybe "fan";
+                    break;
+           }
 
             var tr = document.createElement('tr');
             var icon = document.createElement("i");
@@ -128,6 +134,7 @@ Module.register("MMM-BME680", {
             this.humidity = payload.humidity;
             this.pressure = payload.press;
             this.iaq = payload.iaq;
+            this.r = payload.r;
           this.updateDom();
         }
     },
