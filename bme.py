@@ -3,7 +3,7 @@ import bme680
 from bme680iaq import *
 
 # BME680 initialization
-bme680_temp_offset = -2
+bme680_temp_offset = 0
 try:
     sensor = bme680.BME680(bme680.I2C_ADDR_PRIMARY)
 except (RuntimeError, IOError):
