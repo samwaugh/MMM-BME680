@@ -43,7 +43,7 @@ modules: [
 
 ### Configuration options
 
-<img src=".github/example.png">
+<img src=".github/output.png">
 
 <table width="100%">
 	<thead>
