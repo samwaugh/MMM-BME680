@@ -1,7 +1,7 @@
 {
   "name": "mmm-bme680",
   "version": "1.0.0",
-  "description": "Magic Mirror Module based on Pimoroni BME-68x code and BME-280 example",
+  "description": "Magic Mirror Module based on Pimoroni BME-680 code and BME-280 example",
   "author": "samwaugh",
   "license": "MIT",
   "dependencies": {
