@@ -82,15 +82,15 @@ Module.register("MMM-BME680", {
                     }
                     icon_img = "tachometer-alt"; // maybe "wind"
                     break;
-                case 3:
-                    val = this.iaq;
-                    suffix = " %";
-                    icon_img = "house-chimney-medical" // maybe "fan";
-                    break;
-                 case 4:
+                 case 3:
                     val = this.r;
                     suffix = " Ohms";
                     icon_img = "fan" // maybe "fan";
+                    break;
+                 case 4:
+                    val = this.iaq;
+                    suffix = " %";
+                    icon_img = "house-chimney-medical" // maybe "fan";
                     break;
            }
 
@@ -133,8 +133,8 @@ Module.register("MMM-BME680", {
             this.temperature = payload.temp;
             this.humidity = payload.humidity;
             this.pressure = payload.press;
-            this.iaq = payload.iaq;
             this.r = payload.r;
+            this.iaq = payload.iaq;
           this.updateDom();
         }
     },
