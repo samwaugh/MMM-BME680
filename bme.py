@@ -21,17 +21,18 @@ sensor.select_gas_heater_profile(0)
 sensor.set_temp_offset(bme680_temp_offset)
 
 #Initialize IAQ calculator
-print('calling IAQ tracker')
 iaq_tracker = IAQTracker()
 
-if sensor.get_sensor_data():
-    print('sensor data received')
-    while not sensor.data.heat_stable:
-	sleep(1)
-	sensor.get_sensor_data()
+sensor.get_sensor_data()
+temp = sensor.data.temperature
+hum = sensor.data.humidity
+press = sensor.data.pressure
+while not sensor.data.heat_stable:
+    sensor.get_sensor_data()
+    sleep(1)
     
-    r_gas_k = sensor.data.gas_resistance/1000
-    aq = iaq_tracker.getIAQ(sensor.data)
+r_gas_k = sensor.data.gas_resistance/1000
+aq = iaq_tracker.getIAQ(sensor.data)
    
-    print("{0:.2f} {1:.2f} {2:.2f} {3:.1f} {4:.2f}".format(sensor.data.temperature, sensor.data.humidity, sensor.data.pressure, r_gas_k, aq))
+print("{0:.2f} {1:.2f} {2:.2f} {3:.1f} {4:.2f}".format(temp, hum, press, r_gas_k, aq))
   
