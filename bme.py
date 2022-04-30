@@ -1,6 +1,6 @@
 #!/usr/bin python
 import bme680
-from bme680iaq import *
+import bme680iaq as iaq
 
 # BME680 initialization
 bme680_temp_offset = 0
@@ -21,7 +21,7 @@ sensor.select_gas_heater_profile(0)
 sensor.set_temp_offset(bme680_temp_offset)
 
 #Initialize IAQ calculator
-iaq_tracker = IAQTracker()
+iaq_tracker = iaq.IAQTracker()
 
 sensor.get_sensor_data()
 temp = sensor.data.temperature
@@ -33,6 +33,4 @@ while not sensor.data.heat_stable:
     
 r_gas_k = sensor.data.gas_resistance/1000
 aq = iaq_tracker.getIAQ(sensor.data)
-   
 print("{0:.2f} {1:.2f} {2:.2f} {3:.1f} {4:.2f}".format(temp, hum, press, r_gas_k, aq))
-  
