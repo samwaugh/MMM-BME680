@@ -1,6 +1,7 @@
 #!/usr/bin python
 import bme680
 import bme680iaq as iaq
+from time import sleep
 
 # BME680 initialization
 bme680_temp_offset = 0
