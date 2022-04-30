@@ -38,4 +38,5 @@ while not sensor.data.heat_stable:
 r_gas_k = sensor.data.gas_resistance/1000
 print(r_gas_k)
 aq = iaq_tracker.getIAQ(sensor.data)
+print(aq)
 print("{0:.2f} {1:.2f} {2:.2f} {3:.1f} {4:.2f}".format(temp, hum, press, r_gas_k, aq))
