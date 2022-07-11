@@ -11,10 +11,11 @@ Bosch provide propriety code for converting to the Index for Air Quality (IAQ), 
 
 ## Installation
 0. Connect your BME68x to your Raspberry Pi, including initiation of I2C functionality.
-1. Navigate into your MagicMirror's `modules` folder.
-2. Clone repository `git clone https://github.com/samwaugh/MMM-BME680.git`.
-3. Go to newly created directory (`cd MMM-BME680`).
-4. Execute `npm install` to install the node dependencies.
+1. Install the [Pimoroni BME680](https://github.com/pimoroni/bme680-python) library.
+2. Navigate into your MagicMirror's `modules` folder.
+3. Clone repository `git clone https://github.com/samwaugh/MMM-BME680.git`.
+4. Go to newly created directory (`cd MMM-BME680`).
+5. Execute `npm install` to install the node dependencies.
 
 ### Hardware
 The particular board that this was tested with is the [Pimoroni breakout](https://learn.pimoroni.com/article/getting-started-with-bme680-breakout), older  than the current [BME-680](https://shop.pimoroni.com/products/bme680-breakout?variant=12491552129107) and the [BME-688](https://shop.pimoroni.com/products/bme688-breakout?variant=39336951709779). This can be connected directly to pins 1-5 on the 40-pin RPi GPIO. This also assumes I2C is enabled on the RPi. (It is not recommended to have the sensor so close to the Pi board, given the potential for heat generation.)
