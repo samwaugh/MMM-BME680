@@ -40,7 +40,7 @@ modules: [
 		module: 'MMM-BME680',
 		position: 'top_left',
 		config: {
-			updateInterval: 30 //seconds
+			updateInterval: 1 //seconds
 			}
 	},
 	...
