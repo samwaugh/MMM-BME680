@@ -1,7 +1,6 @@
 #!/usr/bin python
-import bme680
-import bme680iaq as iaq
-from time import sleep
+import bme680    # Pimoroni bme680 module. This file is called bme to avoid conflicting with the bme680 module
+import bme680iaq # jd IAQ sensor calculation
 
 # BME680 initialization
 bme680_temp_offset = 0 # may require a different value as sensor heats due to use
@@ -22,7 +21,7 @@ sensor.select_gas_heater_profile(0)
 sensor.set_temp_offset(bme680_temp_offset)
 
 #Initialize IAQ calculator
-iaq_tracker = iaq.IAQTracker()
+iaq_tracker = bme680iaq.IAQTracker()
 	
 def main():
   if sensor.get_sensor_data():
