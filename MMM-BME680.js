@@ -2,7 +2,7 @@
 Module.register("MMM-BME680", {
     // Default module config.
     defaults: {
-        titleText: "HOME SENSOR",
+        titleText: "MIRROR SENSOR",
         iconDisplay: 1, // display icons
         updateInterval: 100, // Seconds
         temperatureScaleType: 0, // Celsius
