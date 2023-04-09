@@ -77,7 +77,7 @@ modules: [
 			<td><code>updateInterval</code></td>
 			<td>Wait interval between readings of BME680 sensor values in seconds
 				<br><b>Type:</b> <code>int</code>
-				<br><b>Default:</b> <code>100</code>
+				<br><b>Default:</b> <code>1</code>
 			</td>
 		</tr>
 		<tr>
