@@ -63,7 +63,7 @@ modules: [
 			<td><code>titleText</code></td>
 			<td>Widget title text
 				<br><b>Type:</b> <code>string</code>
-				<br><b>Default:</b> <code>Home weather</code>
+				<br><b>Default:</b> <code>MIRROR SENSOR</code>
 			</td>
 		</tr>
 		<tr>
