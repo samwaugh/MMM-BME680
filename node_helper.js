@@ -13,6 +13,11 @@ const exec = require('child_process').exec;
 module.exports = NodeHelper.create({
 	start: function () {
 		console.log('BME680 helper started ...');
+		exec(`python3 ./modules/MMM-BME680/bme_init.py ${deviceAddr}`, (error, stdout) => {
+				if (error) {
+					console.error(`exec error: ${error}`);
+					return;
+				}
 	},
 
 	// Subclass socketNotificationReceived received.
@@ -24,7 +29,7 @@ module.exports = NodeHelper.create({
 			var deviceAddr = this.config.deviceAddress;
 
 			// execute external script
-			exec(`python3 ./modules/MMM-BME680/bme.py ${deviceAddr}`, (error, stdout) => {
+			exec(`python3 ./modules/MMM-BME680/bme_loop.py ${deviceAddr}`, (error, stdout) => {
 				if (error) {
 					console.error(`exec error: ${error}`);
 					return;
