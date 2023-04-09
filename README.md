@@ -22,6 +22,7 @@ The particular board that this was tested with is the [Pimoroni breakout](https:
 
 <img src=".github/bme680-5.webp">
 <img src=".github/RXD PWM0.png">
+<img src=".github/gpio-pins-raspberry-pi-4.png">
 
 ## Update
 1. Go to the extension directory (`cd ~/MagicMirror/modules/MMM-BME680`).
