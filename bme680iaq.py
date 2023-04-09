@@ -1,6 +1,6 @@
-# raspi-bme680-iaq/bme680IAQ.py /
-# thstielow Updated and improved AQ calculation
-# Latest commit f1c41a0 on 25 Feb
+# raspi-bme680-iaq/bme680IAQ.py
+# Latest commit f1c41a0 on 25 Feb 2022
+# thstielow updated and improved AQ calculation. This file is a direct copy of thstielow's code:
 
 import numpy as np
 import bme680
