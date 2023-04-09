@@ -25,11 +25,11 @@ sensor.set_temp_offset(bme680_temp_offset)
 iaq_tracker = iaq.IAQTracker()
 
 def prompt_data(temp, press, hum, Rgas, AQ):	
-	out_string = "{0:.2f}°C, {1:.2f}hPa, {2:.2f}%RH, {3:.1f}kOhm".format(temp,press,hum,R_gas/1000)
+	out_string = "{0:.2f} {1:.2f} {2:.2f} {3:.1f}".format(temp,press,hum,R_gas/1000)
 	if AQ == None:
-		out_string += ", cal."
+		out_string += " 0.0"
 	else:
-		out_string += ", {0:.1f}%aq".format(AQ)
+		out_string += " {0:.1f}".format(AQ)
 	print(out_string)
 
 if sensor.get_sensor_data():
