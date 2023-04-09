@@ -4,7 +4,7 @@ import bme680iaq as iaq
 from time import sleep
 
 # BME680 initialization
-bme680_temp_offset = 0
+bme680_temp_offset = 0 # may require a different value as sensor heats due to use
 try:
     sensor = bme680.BME680(bme680.I2C_ADDR_PRIMARY)
 except (RuntimeError, IOError):
@@ -24,19 +24,19 @@ sensor.set_temp_offset(bme680_temp_offset)
 #Initialize IAQ calculator
 iaq_tracker = iaq.IAQTracker()
 
-sensor.get_sensor_data()
-temp = sensor.data.temperature
-print(temp)
-hum = sensor.data.humidity
-print(hum)
-press = sensor.data.pressure
-print(press)
-while not sensor.data.heat_stable:
-    sensor.get_sensor_data()
-    sleep(1)
-    
-r_gas_k = sensor.data.gas_resistance/1000
-print(r_gas_k)
-aq = iaq_tracker.getIAQ(sensor.data)
-print(aq)
-print("{0:.2f} {1:.2f} {2:.2f} {3:.1f} {4:.2f}".format(temp, hum, press, r_gas_k, aq))
+def prompt_data(temp, press, hum, Rgas, AQ):	
+	out_string = "{0:.2f}°C, {1:.2f}hPa, {2:.2f}%RH, {3:.1f}kOhm".format(temp,press,hum,R_gas/1000)
+	if AQ == None:
+		out_string += ", cal."
+	else:
+		out_string += ", {0:.1f}%aq".format(AQ)
+	print(out_string)
+
+if sensor.get_sensor_data():
+  if sensor.data.heat_stable:
+    r_gas = sensor.data.gas_resistance
+    aq = iaq_tracker.getIAQ(sensor.data)
+  else:
+    r_gas = 0
+    aq = None
+  prompt_data(sensor.data.temperature, sensor.data.humidity, sensor.data.pressure, r_gas, ac)
