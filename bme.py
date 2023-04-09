@@ -23,20 +23,16 @@ sensor.set_temp_offset(bme680_temp_offset)
 
 #Initialize IAQ calculator
 iaq_tracker = iaq.IAQTracker()
+	
+def main():
+  if sensor.get_sensor_data():
+    if sensor.data.heat_stable:
+      r_gas = sensor.data.gas_resistance
+      aq = iaq_tracker.getIAQ(sensor.data)
+    else:
+      r_gas = 0.0
+      aq = -1.0
+    print("{0:.2f} {1:.2f} {2:.2f} {3:.1f} {4:.1f}".format(sensor.data.temperature,sensor.data.pressure,sensor.data.humidity, r_gas/1000, aq))
 
-def prompt_data(temp, press, hum, Rgas, AQ):	
-	out_string = "{0:.2f} {1:.2f} {2:.2f} {3:.1f}".format(temp,press,hum,R_gas/1000)
-	if AQ == None:
-		out_string += " 0.0"
-	else:
-		out_string += " {0:.1f}".format(AQ)
-	print(out_string)
-
-if sensor.get_sensor_data():
-  if sensor.data.heat_stable:
-    r_gas = sensor.data.gas_resistance
-    aq = iaq_tracker.getIAQ(sensor.data)
-  else:
-    r_gas = 0
-    aq = None
-  prompt_data(sensor.data.temperature, sensor.data.humidity, sensor.data.pressure, r_gas, ac)
+if __name__=="__main__":
+   main()
