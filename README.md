@@ -82,7 +82,7 @@ modules: [
 			</td>
 		</tr>
 		<tr>
-			<td><code>temperatureScaleType</code></td>
+			<td><code>tempScaleType</code></td>
 			<td>Different temperature scales
 				<br><b>Type:</b> <code>int</code>
 				<br><b>Default:</b> <code>0</code>
