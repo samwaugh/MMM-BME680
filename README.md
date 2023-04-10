@@ -7,7 +7,11 @@ This is an extension for the [MagicMirror²](https://github.com/MichMich/MagicMi
 - Temperature: -40-85°C.
 - Air quality: measure of breath Volitile Organic Compounds (b-VOC) noting a +/-15% sensor-to-sensor variation.
 
-Bosch provide propriety code for converting to the Index for Air Quality (IAQ), which requires licencing of their software. This project attempts to callibrate the sensor using [thstielow's](https://github.com/thstielow/raspi-bme680-iaq) reverse engineering of the IAQ calculations. This provides an estimate of b-VOC, which should be sufficient as an indication of indoor air quality. (No responsibility is taken for anyone relying on this in dangerous environments, obviously.)
+Bosch provide propriety code for converting to the Index for Air Quality (IAQ), which requires licencing of their software. This project attempts to callibrate the sensor using [thstielow's](https://github.com/thstielow/raspi-bme680-iaq) reverse engineering of the indoor air quality (IAQ) calculations. This provides an estimate of b-VOC, which should be sufficient as an indication of indoor air quality. (No responsibility is taken for anyone relying on this in dangerous environments, obviously.)
+
+
+
+This project is in development: currently I need to make sure that the logging that is used for the IAQ calculation works when the sensor update is being called at different time periods.
 
 ## Hardware
 The particular board that this was tested with is the [Pimoroni breakout](https://learn.pimoroni.com/article/getting-started-with-bme680-breakout), older  than the current [BME-680](https://shop.pimoroni.com/products/bme680-breakout?variant=12491552129107) and the [BME-688](https://shop.pimoroni.com/products/bme688-breakout?variant=39336951709779). This can be connected directly to pins 1, 3, 5, 7 and 9 on the 40-pin RPi GPIO. This also assumes I2C is enabled on the RPi. (It is not recommended to have the sensor so close to the Pi board, given the potential for heat generation.) For completeness, the following three images should assist in locating the board correctly:
