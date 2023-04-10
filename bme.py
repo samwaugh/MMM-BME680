@@ -3,7 +3,7 @@ import bme680    # Pimoroni bme680 module. This file is called bme to avoid conf
 import bme680iaq # thsteilow's IAQ sensor calculation
 
 # BME680 initialization
-bme680_temp_offset = 0 # may require a different value as sensor heats due to use
+bme680_temp_offset = 0 # while this is settable here, the mirror module provides the temperature adjustment as a configuration option.
 try:
     sensor = bme680.BME680(bme680.I2C_ADDR_PRIMARY)
 except (RuntimeError, IOError):
