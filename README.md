@@ -102,7 +102,6 @@ modules: [
 			<td>Offset for temperature sensor, in preferred degrees. This is required due to continuous operation of the BME680 sensor causing the board to heat. It is dependent on the local set-up so best calibrated with an independent temperature sensor.
 				<br><b>Type:</b> <code>float</code>
 				<br><b>Default:</b> <code>1.5</code>
-				<br><b>Scale types:</b> <code>0</code> Celsius, <code>1</code> Fahrenheit
 			</td>
 		</tr>
 	</tbody>
