@@ -4,7 +4,7 @@ Module.register("MMM-BME680", {
     defaults: {
         titleText: "MIRROR SENSOR",
         iconDisplay: 1, // display icons
-        updateInterval: 1, // Seconds
+        updateInterval: 30, // Seconds
         temperatureScaleType: 0, // Celsius
         pressureScaleType: 0 // hPa
     },
@@ -135,7 +135,7 @@ Module.register("MMM-BME680", {
             this.pressure = payload.press;
             this.r = payload.r;
             this.iaq = payload.iaq;
-          this.updateDom();
+            this.updateDom();
         }
     },
 });
