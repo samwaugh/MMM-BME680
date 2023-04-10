@@ -1,4 +1,3 @@
-
 Module.register("MMM-BME680", {
     // Default module config.
     defaults: {
