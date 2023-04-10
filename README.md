@@ -14,26 +14,26 @@ Bosch provide propriety code for converting to the Index for Air Quality (IAQ), 
 This project is in development: currently I need to make sure that the logging that is used for the IAQ calculation works when the sensor update is being called at different time periods.
 
 ## Hardware
-The particular board that this was tested with is the [Pimoroni breakout](https://learn.pimoroni.com/article/getting-started-with-bme680-breakout), older  than the current [BME-680](https://shop.pimoroni.com/products/bme680-breakout?variant=12491552129107) and the [BME-688](https://shop.pimoroni.com/products/bme688-breakout?variant=39336951709779). This can be connected directly to pins 1, 3, 5, 7 and 9 on the 40-pin RPi GPIO. This also assumes I2C is enabled on the RPi. (It is not recommended to have the sensor so close to the Pi board, given the potential for heat generation.) For completeness, the following three images should assist in locating the board correctly:
+The particular board that this was tested with is the [Pimoroni breakout](https://learn.pimoroni.com/article/getting-started-with-bme680-breakout), older  than the current [BME-680](https://shop.pimoroni.com/products/bme680-breakout?variant=12491552129107) and the [BME-688](https://shop.pimoroni.com/products/bme688-breakout?variant=39336951709779). This can be connected directly to pins 1, 3, 5, 7 and 9 on the 40-pin RPi GPIO. This also assumes I2C is enabled on the RPi. (It is not recommended to have the sensor so close to the Pi board, given the potential for heat generation.) For completeness, the following three images should assist in locating the board on the correct pins:
 
 <img src=".github/bme680-5.webp">
 <img src=".github/RXD PWM0.png">
 <img src=".github/gpio-pins-raspberry-pi-4.png">
 
-## Installation
-0. Connect your BME68x to your Raspberry Pi, including initiation of I2C functionality.
+## Module Installation
+0. Connect your BME68x hardware to your Raspberry Pi, including initiation of I2C functionality.
 1. Install the [Pimoroni BME68x Python Library](https://github.com/pimoroni/bme680-python).
 2. Navigate into your MagicMirror's `modules` folder.
 3. Clone repository `git clone https://github.com/samwaugh/MMM-BME680.git`.
 4. Go to newly created directory (`cd MMM-BME680`).
 5. Execute `npm install` to install the node dependencies.
 
-## Update
+## Module Update
 1. Go to the extension directory (`cd ~/MagicMirror/modules/MMM-BME680`).
 2. Update repository `git pull`.
 3. Execute `npm install` to install the node dependencies.
 
-## Using the module
+## Using the Module
 
 Add it to the modules array in the `config/config.js` file:
 
@@ -51,7 +51,7 @@ modules: [
 ]
 ````
 
-### Configuration options
+### Configuration Options
 
 <img src=".github/output.png">
 
@@ -126,7 +126,7 @@ The following are other possible sources of air quality code that have not been 
 3. Script should print sensor values like this `24.7 38.3 996.6` - that means `temperature humidity pressure`
    - If you only see `0 0 0` make sure you are not setting the PINs you are using in another program. 
 
-## Additional Sensor Projects of Interest
+### Additional Sensor Projects of Interest
 
 The following are MMM projects looking at integrating hardware sensors as opposed to full IOT weather sensor solutions:
 
