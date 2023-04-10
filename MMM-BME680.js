@@ -4,8 +4,9 @@ Module.register("MMM-BME680", {
         titleText: "MIRROR SENSOR",
         iconDisplay: 1, // display icons
         updateInterval: 30, // Seconds
-        temperatureScaleType: 0, // Celsius
-        pressureScaleType: 0 // hPa
+        tempScaleType: 0, // Celsius
+        pressureScaleType: 0, // hPa
+        tempOffset: 1.5 // degrees
     },
 
     // Define start sequence.
@@ -51,13 +52,13 @@ Module.register("MMM-BME680", {
 
             switch (i) {
                 case 0:
-                    switch (this.config.temperatureScaleType) {
+                    switch (this.config.tempScaleType) {
                         case 0: // Celsius
-                            val = this.temperature;
+                            val = this.temperature - this.config.tempOffset;
                             suffix = "°C";
                             break;
                         case 1: // Fahrenheit
-                            val = Math.round(this.temperature * 9.0 / 5.0 + 32.0);
+                            val = Math.round(this.temperature * 9.0 / 5.0 + 32.0) - this.config.tempOffset;
                             suffix = "°F";
                             break;
                     }
