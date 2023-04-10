@@ -40,7 +40,7 @@ modules: [
 		module: 'MMM-BME680',
 		position: 'top_left',
 		config: {
-			updateInterval: 1 //seconds
+			updateInterval: 30 //seconds
 			}
 	},
 	...
@@ -132,4 +132,3 @@ The following are MMM projects looking at integrating hardware sensors as oppose
 - [MMM-HDC1080](https://github.com/MichaelF1/MMM-HDC1080) temperature and humidity sensor.
 - [MMM-ds18b20](https://github.com/Thlb/MMM-temp-ds18b20) temperature sensor.
 - [MMM-01ZM](https://github.com/rubinho101/MMM-01ZM) Xiaomi LYWSDCGQ 01ZM Temperature-Humidity sensor AND [Nova PM SDS011](https://microcontrollerslab.com/nova-pm-sds011-dust-sensor-pinout-working-interfacing-datasheet/) particulate matter (dust and smoke) sensor.
-
