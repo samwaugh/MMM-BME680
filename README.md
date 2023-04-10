@@ -97,6 +97,14 @@ modules: [
 				<br><b>Scale types:</b> <code>0</code> hPa, <code>1</code> inHg
 			</td>
 		</tr>
+		<tr>
+			<td><code>tempOffset</code></td>
+			<td>Offset for temperature sensor, required due to continuous operation
+				<br><b>Type:</b> <code>float</code>
+				<br><b>Default:</b> <code>1.5</code>
+				<br><b>Scale types:</b> <code>0</code> Celsius, <code>1</code> Fahrenheit
+			</td>
+		</tr>
 	</tbody>
 </table>
 
