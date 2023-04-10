@@ -19,6 +19,9 @@ The particular board that this was tested with is the [Pimoroni breakout](https:
 <img src=".github/gpio-pins-raspberry-pi-4.png">
 
 ## Module Details
+<img src=".github/output.png">
+Note that this is an old picture. The intent is to update when the IAQ calculations are working correctly, and to add colour coding to the IAQ field to highlight poor air quality.
+
 ### Installation
 0. Connect your BME68x hardware to your Raspberry Pi, including initiation of I2C functionality.
 1. Install the [Pimoroni BME68x Python Library](https://github.com/pimoroni/bme680-python).
@@ -48,10 +51,6 @@ modules: [
 	...
 ]
 ````
-
-<img src=".github/output.png">
-
-Note that this is an old picture. The intent is to update when the IAQ calculations are working correctly, and to add colour coding to the IAQ field to highlight poor air quality.
 
 <table width="100%">
 	<thead>
