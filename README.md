@@ -126,7 +126,7 @@ The following are other possible sources of air quality code that have not been 
 3. Script should print sensor values like this `24.7 38.3 996.6` - that means `temperature humidity pressure`
    - If you only see `0 0 0` make sure you are not setting the PINs you are using in another program. 
 
-### Additional Sensor Projects of Interest
+## Additional Sensor Projects of Interest
 
 The following are MMM projects looking at integrating hardware sensors as opposed to full IOT weather sensor solutions:
 
