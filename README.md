@@ -18,7 +18,8 @@ The particular board that this was tested with is the [Pimoroni breakout](https:
 <img src=".github/RXD PWM0.png">
 <img src=".github/gpio-pins-raspberry-pi-4.png">
 
-## Module Installation
+## Module Details
+### Installation
 0. Connect your BME68x hardware to your Raspberry Pi, including initiation of I2C functionality.
 1. Install the [Pimoroni BME68x Python Library](https://github.com/pimoroni/bme680-python).
 2. Navigate into your MagicMirror's `modules` folder.
@@ -26,13 +27,12 @@ The particular board that this was tested with is the [Pimoroni breakout](https:
 4. Go to newly created directory (`cd MMM-BME680`).
 5. Execute `npm install` to install the node dependencies.
 
-## Module Update
+### Updating
 1. Go to the extension directory (`cd ~/MagicMirror/modules/MMM-BME680`).
 2. Update repository `git pull`.
 3. Execute `npm install` to install the node dependencies.
 
-## Using the Module
-
+### Configuration Options
 Add it to the modules array in the `config/config.js` file:
 
 ````javascript
@@ -48,8 +48,6 @@ modules: [
 	...
 ]
 ````
-
-### Configuration Options
 
 <img src=".github/output.png">
 
