@@ -7,7 +7,7 @@ This is an extension for the [MagicMirror²](https://github.com/MichMich/MagicMi
 - Temperature: -40-85°C.
 - Air quality: measure of breath Volitile Organic Compounds (b-VOC) noting a +/-15% sensor-to-sensor variation.
 
-Bosch provide propriety code for converting to the Index for Air Quality (IAQ), which requires licencing of their software. This project attempts to callibrate the sensor using [thstielow's](https://github.com/thstielow/raspi-bme680-iaq) reverse engineering of the indoor air quality (IAQ) calculations. This provides an estimate of b-VOC, which should be sufficient as an indication of indoor air quality. (No responsibility is taken for anyone relying on this in dangerous environments, obviously.)
+Bosch provide propriety code for converting to the Index for Air Quality (IAQ), which requires licencing of their software. This project attempts to callibrate the sensor using [thstielow's](https://github.com/thstielow/raspi-bme680-iaq) reverse engineering of the IAQ calculations. This provides an estimate of b-VOC, which should be sufficient as an indication of indoor air quality. (No responsibility is taken for anyone relying on this in dangerous environments, obviously.)
 
 
 
