@@ -53,6 +53,8 @@ modules: [
 
 <img src=".github/output.png">
 
+Note that this is an old picture. The intent is to update when the IAQ calculations are working correctly, and to add colour coding to the IAQ field to highlight poor air quality.
+
 <table width="100%">
 	<thead>
 		<tr>
