@@ -1,6 +1,6 @@
 #!/usr/bin python
 import bme680    # Pimoroni bme680 module. This file is called bme to avoid conflicting with the bme680 module
-import bme680iaq # jd IAQ sensor calculation
+import bme680iaq # thsteilow's IAQ sensor calculation
 
 # BME680 initialization
 bme680_temp_offset = 0 # may require a different value as sensor heats due to use
